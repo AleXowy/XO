@@ -1,12 +1,13 @@
 package XO;
 
-import java.util.Scanner;
+import XO.utils.consoleReader.ConsoleReader;
 
 
 import static XO.Game2.gameModeStatus;
 import static XO.SinglePlayer.*;
 
 public class IfGameEnds {
+    private final static ConsoleReader consoleReader = ConsoleReader.getInstance();
     private static int roundCounter;
     private static int currentRoundsCounter;
     private static int XScore;
@@ -73,8 +74,7 @@ public class IfGameEnds {
         Multiplayer multiplayer = new Multiplayer();
         Game2 game2 = new Game2();
         Board board = new Board();
-        Scanner scanner = new Scanner(System.in);
-        String gameEndsUserChose = scanner.nextLine();
+        String gameEndsUserChose = consoleReader.getScanner().nextLine();
 
         switch (gameEndsUserChose) {
             case "1" -> {

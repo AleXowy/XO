@@ -1,13 +1,16 @@
 package XO;
 
-import java.util.Scanner;
+import XO.utils.consoleReader.ConsoleReader;
+import XO.utils.enums.StatusCodes;
 
 import static XO.Board.gameAreaArray;
 
 public class SinglePlayer {
-   static ComputerMoves computerMoves = new ComputerMoves();
-   static CheckWinCon checkWinCon = new CheckWinCon();
-   IfGameEnds ifGameEnds = new IfGameEnds();
+
+    private final static ConsoleReader consoleReader = ConsoleReader.getInstance();
+    static ComputerMoves computerMoves = new ComputerMoves();
+    static CheckWinCon checkWinCon = new CheckWinCon();
+    IfGameEnds ifGameEnds = new IfGameEnds();
 
     static Board board = new Board();
     static String playerChose;
@@ -15,14 +18,13 @@ public class SinglePlayer {
     static String OValue;
     static String computerChose;
 
-    static Scanner scannerSP = new Scanner(System.in);
     public boolean singlePlayerXO() {
 
         System.out.println("Choose the number of winning rounds");
-        ifGameEnds.setRoundCounter(scannerSP.nextInt());
-        scannerSP.nextLine();
+        ifGameEnds.setRoundCounter(consoleReader.getScanner().nextInt());
+        consoleReader.getScanner().nextLine();
         System.out.println("Chose X or O!");
-        playerChose = scannerSP.nextLine();
+        playerChose = consoleReader.getScanner().nextLine();
         playerChose = playerChose.toUpperCase();
 
         if (playerChose.equals("X")) {
@@ -50,7 +52,7 @@ public class SinglePlayer {
           1.Player
           2.AI
         """);
-        String firstMove = scannerSP.nextLine();
+        String firstMove = consoleReader.getScanner().nextLine();
         if (firstMove.equals("1")) {
             singlePlayerXOMoves();
         } if (firstMove.equals("2")) {
@@ -59,7 +61,6 @@ public class SinglePlayer {
             System.out.println("Error");
         }
         singlePlayerXOMoves();
-        scannerSP.close();
     }
 
     public static void singlePlayerXOMoves() {
@@ -72,8 +73,7 @@ public class SinglePlayer {
 
             while (true) {
             checkWinCon.checkWhoWon();
-            Scanner scannerMoves = new Scanner(System.in);
-            String userMove = scannerMoves.nextLine();
+            String userMove = consoleReader.getScanner().nextLine();
             switch (userMove.toLowerCase()) {
 
                 case "a1" -> {

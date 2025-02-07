@@ -1,10 +1,13 @@
 package XO;
 
-import java.util.Scanner;
+import XO.utils.consoleReader.ConsoleReader;
+import XO.utils.enums.StatusCodes;
+
 
 import static XO.Board.gameAreaArray;
 
 public class Multiplayer extends SinglePlayer {
+    private final static ConsoleReader consoleReader = ConsoleReader.getInstance();
     static String player1Chose;
     static String player2Chose;
     static boolean player1Move = false;
@@ -13,10 +16,10 @@ public class Multiplayer extends SinglePlayer {
     public boolean multiPlayerXO() {
 
         System.out.println("Choose the number of winning rounds");
-        ifGameEnds.setRoundCounter(scannerSP.nextInt());
-        scannerSP.nextLine();
+        ifGameEnds.setRoundCounter(consoleReader.getScanner().nextInt());
+        consoleReader.getScanner().nextLine();
         System.out.println("Player1. Chose X or O!");
-        player1Chose = scannerSP.nextLine();
+        player1Chose = consoleReader.getScanner().nextLine();
         player1Chose = player1Chose.toUpperCase();
 
         if (player1Chose.equals("X")) {
@@ -49,8 +52,8 @@ public class Multiplayer extends SinglePlayer {
 
         while (true) {
             checkWinCon.checkWhoWon();
-            Scanner scannerMoves = new Scanner(System.in);
-            String userMove = scannerMoves.nextLine();
+
+            String userMove = consoleReader.getScanner().nextLine();
             switch (userMove.toLowerCase()) {
 
                 case "a1" -> {
