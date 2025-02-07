@@ -1,10 +1,9 @@
 package XO;
 
-import XO.utils.ConsoleReader.ConsoleReader;
+import XO.utils.consoleReader.ConsoleReader;
+import XO.utils.enums.StatusCodes;
 
 import java.util.Objects;
-import java.util.Scanner;
-import java.util.logging.ConsoleHandler;
 
 
 public class Game2 {

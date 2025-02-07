@@ -1,8 +1,7 @@
 package XO;
 
-import XO.utils.ConsoleReader.ConsoleReader;
-
-import java.util.Scanner;
+import XO.utils.consoleReader.ConsoleReader;
+import XO.utils.enums.StatusCodes;
 
 import static XO.Board.gameAreaArray;
 

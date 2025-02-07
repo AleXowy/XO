@@ -1,4 +1,4 @@
-package XO;
+package XO.utils.enums;
 
 public enum StatusCodes {
 FORBIDDEN(403);

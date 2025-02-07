@@ -1,8 +1,6 @@
 package XO;
 
-import XO.utils.ConsoleReader.ConsoleReader;
-
-import java.util.Scanner;
+import XO.utils.consoleReader.ConsoleReader;
 
 
 import static XO.Game2.gameModeStatus;

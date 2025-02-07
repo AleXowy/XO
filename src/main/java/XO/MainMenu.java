@@ -1,8 +1,6 @@
 package XO;
 
-import XO.utils.ConsoleReader.ConsoleReader;
-
-import java.util.Scanner;
+import XO.utils.consoleReader.ConsoleReader;
 
 public class MainMenu {
     //todo replace all int variable by strings of numbers value,

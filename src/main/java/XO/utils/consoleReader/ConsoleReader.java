@@ -1,4 +1,4 @@
-package XO.utils.ConsoleReader;
+package XO.utils.consoleReader;
 
 import java.util.Scanner;
 
