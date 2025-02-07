@@ -23,6 +23,7 @@ public class SinglePlayer {
 
         System.out.println("Choose the number of winning rounds");
         ifGameEnds.setRoundCounter(consoleReader.getScanner().nextInt());
+        consoleReader.getScanner().nextLine();
         System.out.println("Chose X or O!");
         playerChose = consoleReader.getScanner().nextLine();
         playerChose = playerChose.toUpperCase();
@@ -61,7 +62,6 @@ public class SinglePlayer {
             System.out.println("Error");
         }
         singlePlayerXOMoves();
-        scannerSP.close();
     }
 
     public static void singlePlayerXOMoves() {

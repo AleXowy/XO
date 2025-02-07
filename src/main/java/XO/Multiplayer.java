@@ -17,6 +17,7 @@ public class Multiplayer extends SinglePlayer {
 
         System.out.println("Choose the number of winning rounds");
         ifGameEnds.setRoundCounter(consoleReader.getScanner().nextInt());
+        consoleReader.getScanner().nextLine();
         System.out.println("Player1. Chose X or O!");
         player1Chose = consoleReader.getScanner().nextLine();
         player1Chose = player1Chose.toUpperCase();
