@@ -1,8 +1,8 @@
-package XO2;
+package XO;
 
 import java.util.Arrays;
 
-import static XO2.SinglePlayer.*;
+import static XO.SinglePlayer.*;
 
 public class CheckWinCon extends Board {
 

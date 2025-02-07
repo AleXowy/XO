@@ -1,10 +1,10 @@
-package XO2;
+package XO;
 
 import java.util.Scanner;
 
 
-import static XO2.Game2.gameModeStatus;
-import static XO2.SinglePlayer.*;
+import static XO.Game2.gameModeStatus;
+import static XO.SinglePlayer.*;
 
 public class IfGameEnds {
     private static int roundCounter;

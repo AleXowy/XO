@@ -1,8 +1,8 @@
-package XO2;
+package XO;
 
 import java.util.Scanner;
 
-import static XO2.Board.gameAreaArray;
+import static XO.Board.gameAreaArray;
 
 public class Multiplayer extends SinglePlayer {
     static String player1Chose;

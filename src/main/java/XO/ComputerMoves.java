@@ -1,10 +1,9 @@
-package XO2;
+package XO;
 
-import java.util.Arrays;
 import java.util.Random;
 
-import static XO2.CheckWinCon.winingCombo;
-import static XO2.SinglePlayer.*;
+import static XO.CheckWinCon.winingCombo;
+import static XO.SinglePlayer.*;
 
 public class ComputerMoves extends Board {
 

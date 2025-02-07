@@ -1,6 +1,5 @@
-package XO2;
+package XO;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class MainMenu {
