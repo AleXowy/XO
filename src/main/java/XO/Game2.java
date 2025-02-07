@@ -1,15 +1,19 @@
 package XO;
 
+import XO.utils.ConsoleReader.ConsoleReader;
+
 import java.util.Objects;
 import java.util.Scanner;
+import java.util.logging.ConsoleHandler;
 
 
 public class Game2 {
+    private final static ConsoleReader consoleReader = ConsoleReader.getInstance();
     static String gameModeStatus;
+
     public void gameStart2() {
         MainMenu mainMenu = new MainMenu();
         Board board = new Board();
-        Scanner scannerGame = new Scanner(System.in);
         while (true) {
             System.out.println("""
                     XO menu!
@@ -18,7 +22,7 @@ public class Game2 {
                      8.Back to main menu!
                      9.Exit!""");
 
-           String userChoiceTicTacTie = scannerGame.nextLine();
+           String userChoiceTicTacTie = consoleReader.getScanner().nextLine();
 
             if (!Objects.equals(userChoiceTicTacTie, "1") &&
                     !Objects.equals(userChoiceTicTacTie, "2") &&
